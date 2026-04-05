@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="font-sans">
+    <div className="font-sans antialiased">
       <Navbar />
       <Hero />
       <About />
