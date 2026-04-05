@@ -1,6 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 html {
   scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    @apply antialiased text-gray-800;
+  }
+}
+
+@layer components {
+  .section-heading {
+    @apply font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
+  }
+
+  .section-subheading {
+    @apply text-lg md:text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed;
+  }
+
+  .gold-gradient {
+    background: linear-gradient(135deg, #D4A843 0%, #F0D78C 50%, #D4A843 100%);
+  }
+
+  .gold-text {
+    background: linear-gradient(135deg, #D4A843 0%, #F0D78C 50%, #B8922E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/40 shadow-lg;
+  }
+
+  .dark-glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
 }
